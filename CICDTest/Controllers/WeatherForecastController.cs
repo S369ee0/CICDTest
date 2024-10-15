@@ -4,6 +4,7 @@ namespace CICDTest.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    //cicd test
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
