@@ -20,7 +20,4 @@ WORKDIR /app
 # 从构建阶段复制发布输出  
 COPY --from=build /app/build .  
   
-# 设置入口点来运行应用  
-# 注意：确保 CICDTest.dll 是在 /app/build 目录下生成的  
-# 如果不是，请调整 COPY 指令或构建输出路径  
 ENTRYPOINT ["dotnet", "CICDTest.dll"]
