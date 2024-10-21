@@ -19,7 +19,7 @@ RUN dotnet build "./CICDTest/CICDTest.csproj" -c Release -o /app/build
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime  
 WORKDIR /app  
   
-# 从构建阶段复制发布输出  
+
 COPY --from=build /app/build .  
   
 ENTRYPOINT ["dotnet", "CICDTest.dll"]
