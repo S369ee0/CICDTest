@@ -13,9 +13,7 @@ COPY . .
   
 # 构建应用为发布版本  
 RUN dotnet build "./CICDTest/CICDTest.csproj" -c Release -o /app/build  
-  
-# 使用 .NET 运行时镜像来运行应用  
-# 注意：这里应该使用与 SDK 版本兼容的运行时镜像  
+ 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime  
 WORKDIR /app  
   
