@@ -19,6 +19,10 @@ namespace CICDTest.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// test api
+        /// </summary>
+        /// <returns></returns>
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
