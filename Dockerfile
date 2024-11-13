@@ -8,7 +8,6 @@ EXPOSE 443
 COPY ["./CICDTest/CICDTest.csproj", "./"]  
 RUN dotnet restore "CICDTest.csproj"  
   
-# 复制剩余的应用源代码  
 COPY . .  
   
 RUN dotnet build "./CICDTest/CICDTest.csproj" -c Release -o /app/build  
