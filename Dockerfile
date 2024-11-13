@@ -11,7 +11,6 @@ RUN dotnet restore "CICDTest.csproj"
 # 复制剩余的应用源代码  
 COPY . .  
   
-# 构建应用为发布版本  
 RUN dotnet build "./CICDTest/CICDTest.csproj" -c Release -o /app/build  
  
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime  
