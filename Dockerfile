@@ -4,7 +4,6 @@ WORKDIR /src
 EXPOSE 80
 EXPOSE 443
   
-# 复制 csproj 文件并恢复依赖项  
 COPY ["./CICDTest/CICDTest.csproj", "./"]  
 RUN dotnet restore "CICDTest.csproj"  
   
