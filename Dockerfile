@@ -1,4 +1,4 @@
-﻿# 使用 .NET SDK 镜像来构建应用  
+﻿
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build  
 WORKDIR /src
 EXPOSE 80
