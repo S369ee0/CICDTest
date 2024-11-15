@@ -8,7 +8,7 @@ COPY ["./CICDTest/CICDTest.csproj", "./"]
 RUN dotnet restore "CICDTest.csproj"  
   
 COPY . .  
-  
+
 RUN dotnet build "./CICDTest/CICDTest.csproj" -c Release -o /app/build  
  
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime  
